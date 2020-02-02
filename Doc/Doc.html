@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AudioCalc</title>
+	</head>
+	<body>
+		<p style="text-indent:32.2px; font-size:28.0pt"><b><i>AudioCalc</b></i></p>
+		<p style="text-indent:32.2px;">This programm provide functions which can help you with some game calculations. There is a only one rule which you need to follow if you want to the program returns a correct result: <b>Don't use dot as a value's splitter</b>. Use dot to specify fractional portion of value. For value's splitter you can use any other symbols/words. For example:</p>
+		<ul>
+			<li> 3.234.123 - Wrong result;</li>
+			<li> 3,234,123.23 - Correct result;</li>
+			<li> 3234123.23 - Correct result;</li>
+			<li> 3Bitch234Bitch123.23 - Correct result.</li>
+			<li> 3Блядь234Хуйня123.23 - Correct result.</li>
+		</ul>
+
+		<hr>
+		<p> <img src="MainWindow.png"/></p>
+		
+		<hr>
+		<p style="text-indent:32.2px"><b>"Skill Raiting calculator" (is highlighted by a blue frame)</b> allows you to calc requested skill raiting or the score requested to reach entered skill raiting. To use it you need to fill the <b>"Gold Medal"</b> field. Now, if you would fill <b>"Skill Raiting"</b> field the program will print requested score to reach the specified skill raiting. On the other hand, you may fill the <b>"Score"</b> field. Then the program print you how many skill raiting you'll receive. If both fields is filled the program calc requested score to earn specify skill raiting</i></p>
+		
+		<hr>
+		<p style="text-indent:32.2px"><b>"Cluster calculator" (is highlighted by a red frame)</b> allows you to calc a cluster value with specified bonuses:</p>
+			<ol style="margin-left:32.2px">
+				<li><b>Base Score</b>. Here you need to specify cluster's value. You can make it by entering numeric value or you can use <i>input mask in <u>"XXMC"</u> format<i></li>
+					<ul>
+						<li><b>XX</b> is the numeric amount of blocks. The amount of blocks should be in range [3;28];</li>
+						<li><b>M (Mode)</b> specifies game mode's chart. By default the program use Pro/Casual mode's chart. To use Elite mode's chart you need to add "e" letter. Full Pro/Casual/Elite charts you can find in the <b>"Charts"</b> tab;</li>
+						<li>
+						<b>C (Color)</b> specifies color. It could be "r", "y", "g", "b" or "p";<br><br>
+						To summarize, here is 2 examples:<br>
+						<b>24r</b> (24 red blocks in Pro/Causal chart. It's 9,792 points);<br>
+						<b>28ey</b> (28 yellow blocks in Elite chart. It's 8,325 points);<br>
+						</li>
+					</ul>
+				<li><b>Chain Step</b>. Here you can choose desired <b>"Chain"</b> bonuse multiplier (up to 99). Chain multiplier applyes only if value of this field is more 1. Full chain chart you can find in the <b>"Charts"</b> tab.</li>
+				<li><b>Bonus</b> field allows you to apply specified character's bonuse multiplier. For Pusher, DV Pro and Eraser it <b>x2</b>, for DVE it <b>x2.4</b> and for DV casual it's <b>x1.5</b>.</li>
+				<li><b>Multiplier</b> field provide Pro mode's multipliers bonuses. It range <b>x1-x7</b> for Vegas and <b>x1-x4</b> for other characters.</li>
+				<li><b>Sync Bonus</b> checkbox applyes specified Sync Bonus's value to specified blocks amount or numeric value. Full Sync Bonus chart you can find in the <b>"Charts"</b> tab.</li>
+			</ol>	
+		
+		<hr>
+		<p style="text-indent:32.2px"><b>"Total/Raw Score calculator" (is highlighted by a green frame)</b> hepls you to find <b>"Raw"</b> score (the score without any <i>afterride</i> bonuses) or <b>"Total"</b> score (the score with afterride bonuses). If the "Raw" and "Total" fields is filled the programm calc <u>TOTAL</u> score. If one of the fields is filled the programm calc the empty one (but be sure it's indeed empty). Combo box "Preset" allows you to choose one of 3 ready presets, optimized for specified characters.</p>
+		<table style="frame:border; border-width:2px; font-size:10.0pt">
+			<caption style="text-indent:32.2px"><b>Afterride bonuses</b></caption>
+			<tr>
+				<td><b>&nbsp;Name</b></td>
+				<td><b>&nbsp;Value</b></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Clean Finish</td>
+				<td>&nbsp;+25%</td>
+			</tr>
+			<tr>
+				<td>&nbsp;Seeing Red<br>&nbsp;Butter Ninja</td>
+				<td>&nbsp;+5%</td>
+			</tr>
+			<tr>
+				<td>&nbsp;Stealth</td>
+				<td>&nbsp;+30%</td>
+			</tr>
+			<tr>
+				<td>&nbsp;Match 7/11/21</td>
+				<td>&nbsp;+7%/11%/21% </td>
+			</tr>
+		</table>
+		
+		<hr>
+		<p style="text-indent:32.2px"><b>The big table (is highlighted by a yellow frame)</b> can calc total amount of specified blocks and track's traffic.</p>
+		<ol style="margin-left:32.2px">
+			<li>Enter amount of collected blocks in <b>"Collected, count"</b> column;</li>
+			<li>Enter % of collected blocks in <b>"Collected, %"</b> column;</li>
+			<li>Enter requested % blocks in <b>"Requested, %"</b> column;</li>
+		</ol>
+		<p style="text-indent:32.2px">After clicking "Calculate" the program will show you how many specified blocks you need to collect to reach percent value which you specify in <b>"Requested, %"</b> column.</p>	
+		<p style="text-indent:32.2px">If the field <b>"Track's Duration"</b> is filled, the program will calc you track's traffic. But be sure there are no "0" values in <b>"Collected, %"</b> column.</p>
+		<hr>
+	</body>
+</html>
